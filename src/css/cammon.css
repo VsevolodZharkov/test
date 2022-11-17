@@ -1,12 +1,47 @@
+@font-face {
+	font-family: 'AvenirNextCyr-Bold';
+	src: url('../fonts/avenirnextcyr-bold.eot'); /* IE 9 Compatibility Mode */
+	src: url('../fonts/avenirnextcyr-bold.eot?#iefix') format('embedded-opentype'), /* IE < 9 */
+		url('../fonts/avenirnextcyr-bold.woff2') format('woff2'), /* Super Modern Browsers */
+		url('../fonts/avenirnextcyr-bold.woff') format('woff'), /* Firefox >= 3.6, any other modern browser */
+		url('../fonts/avenirnextcyr-bold.ttf') format('truetype'), /* Safari, Android, iOS */
+		url('../fonts/avenirnextcyr-bold.svg#avenirnextcyr-bold') format('svg'); /* Chrome < 4, Legacy iOS */
+}
+
 * {
   box-sizing: border-box;
 }
 
 body {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
-    Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
+	box-sizing: border-box;
+	margin: 0;
+	font-family: 'Inter', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: #FFFFFF;
+}
+
+h1,
+h2,
+h3,
+h4,
+p {
+  margin: 0;
+}
+
+ul,
+li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.shape-section {
+	padding: 77px 20px 133px 20px;
+}
+
+.form-user-data {
+	display: grid;
+	grid-template-columns: 60px 60px;
 }
 
