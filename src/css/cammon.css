@@ -1,11 +1,14 @@
 @font-face {
-	font-family: 'AvenirNextCyr-Bold';
-	src: url('../fonts/avenirnextcyr-bold.eot'); /* IE 9 Compatibility Mode */
-	src: url('../fonts/avenirnextcyr-bold.eot?#iefix') format('embedded-opentype'), /* IE < 9 */
-		url('../fonts/avenirnextcyr-bold.woff2') format('woff2'), /* Super Modern Browsers */
-		url('../fonts/avenirnextcyr-bold.woff') format('woff'), /* Firefox >= 3.6, any other modern browser */
-		url('../fonts/avenirnextcyr-bold.ttf') format('truetype'), /* Safari, Android, iOS */
-		url('../fonts/avenirnextcyr-bold.svg#avenirnextcyr-bold') format('svg'); /* Chrome < 4, Legacy iOS */
+  font-family: "AvenirNextCyr-Bold";
+  src: url("../fonts/avenirnextcyr-bold.eot"); /* IE 9 Compatibility Mode */
+  src: url("../fonts/avenirnextcyr-bold.eot?#iefix") format("embedded-opentype"),
+    /* IE < 9 */ url("../fonts/avenirnextcyr-bold.woff2") format("woff2"),
+    /* Super Modern Browsers */ url("../fonts/avenirnextcyr-bold.woff")
+      format("woff"),
+    /* Firefox >= 3.6, any other modern browser */
+      url("../fonts/avenirnextcyr-bold.ttf") format("truetype"),
+    /* Safari, Android, iOS */
+      url("../fonts/avenirnextcyr-bold.svg#avenirnextcyr-bold") format("svg"); /* Chrome < 4, Legacy iOS */
 }
 
 * {
@@ -13,12 +16,12 @@
 }
 
 body {
-	box-sizing: border-box;
-	margin: 0;
-	font-family: 'Inter', sans-serif;
+  box-sizing: border-box;
+  margin: 0;
+  font-family: "Inter", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #FFFFFF;
+  background-color: #ffffff;
 }
 
 h1,
@@ -29,16 +32,53 @@ p {
   margin: 0;
 }
 
+ul,
+li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
 .shape-section {
-	padding: 77px 20px 133px 20px;
+  padding: 77px 20px 133px 20px;
 }
 
 .form-user-data {
-	display: grid;
-	grid-template-columns: 60px 60px;
+  display: grid;
+  grid-template-columns: 60px 60px;
 }
 
 .google_map {
-	min-height: 573px;
-	width: 100%;
+  min-height: 573px;
+  width: 100%;
+}
+.info_text {
+  font-family: "Inter";
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 1.66;
+}
+.info_adress {
+  font-family: "Inter";
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.66;
+}
+.auth__link-contakt {
+  display: flex;
+  align-items: center;
+	text-decoration: none;
+	color: #858585;
+  font-family: "Inter";
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.83;
+}
+.auth__acon.email {
+  height: 12px;
+  width: 12px;
+}
+.auth__acon.phone {
+  height: 13px;
+  width: 13px;
 }

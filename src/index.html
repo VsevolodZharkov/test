@@ -113,12 +113,34 @@
         const marker = new google.maps.Marker({
           position: uluru,
           map: map,
-          icon: "./svg/symbol-defs.svg#Vector",
+          icon: "./img/marker.png",
         });
 
         const InfoWindow = new google.maps.InfoWindow({
-          content:
-            "Voodoo 137 Glasgow St., Unit 115 Kitchener, ON N2G 4X8 Ukraine",
+          content: `<div class="info">
+				<p class="info_text">Voodoo</p>
+				<p class="info_adress">137 Glasgow St., Unit 115 Kitchener, ON N2G 4X8 Ukraine</p>
+				<ul class="auth">
+					<li class="auth__point">
+						<a class="auth__link-contakt" href="tel:1-800-480-9597">
+									<svg class="auth__acon phone">
+											<use href="./svg/symbol-defs.svg#icon-phone">
+											</use>
+									</svg>
+									1-800-480-9597
+							</a>
+					</li>
+					<li class="auth__point">
+						<a class="auth__link-contakt" href="mailto:info@voodoo.com">
+									<svg class="auth__acon email">
+											<use href="./svg/symbol-defs.svg#icon-mail">
+											</use>
+									</svg>
+									info@voodoo.com
+							</a>
+					</li>
+			</ul>
+			</div>`,
         });
 
         InfoWindow.open(map, marker);
