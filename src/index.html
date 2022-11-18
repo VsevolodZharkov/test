@@ -19,25 +19,28 @@
       <p class="text">
         The Voodoo team is looking forward to hearing from you!
       </p>
-      <form class="form-user-data" autocomplete="on">
-        <label>
+      <form class="form-user" autocomplete="on">
+        <label class="form-user_lab">
           <input
+            class="form-user_text"
             type="text"
             name="full-name"
             autofocus
             placeholder="Full Name*"
           />
         </label>
-        <label>
+        <label class="form-user_lab">
           <input
+            class="form-user_text"
             type="text"
             name="title"
             autofocus
             placeholder="Title/Position*"
           />
         </label>
-        <label>
+        <label class="form-user_lab">
           <input
+            class="form-user_text"
             name="education"
             placeholder="Practice / Institution*"
             autofocus
@@ -51,33 +54,50 @@
             <option value="Institute 5"></option>
           </datalist>
         </label>
-        <label>
+        <label class="form-user_lab">
           <input
+					class="form-user_text"
             type="email"
             name="email"
             autofocus
             placeholder="Email Address*"
           />
         </label>
-        <label>
+        <label class="form-user_lab">
           <input
+            class="form-user_text"
             type="tel"
             name="phone_number"
             autofocus
             placeholder="Phone Number*"
           />
         </label>
-        <label>
-          <input type="email" name="email" autofocus placeholder="Email" />
-        </label>
-        <label>
+        <label class="form-user_lab">
           <input
+            class="form-user_text"
             name="option"
             placeholder="Medical Profession*"
             autofocus
             list="options"
           />
-          <datalist id="options">
+          <datalist id="options" >
+            <option value="Option 1"></option>
+            <option value="Option 2"></option>
+            <option value="Option 3"></option>
+            <option value="Option 4"></option>
+            <option value="Option 5"></option>
+          </datalist>
+        </label>
+        <label class="form-user_lab">
+          <input
+            class="form-user_text"
+            type="text"
+            name="option_types"
+            autofocus
+            placeholder="Type of Inquiry*"
+            list="options_types"
+          />
+					<datalist id="options_types" >
             <option value="Option 1"></option>
             <option value="Option 2"></option>
             <option value="Option 3"></option>
@@ -86,18 +106,14 @@
           </datalist>
         </label>
         <label>
-          <input
-            type="email"
-            name="email"
-            autofocus
-            placeholder="Type of Inquiry*"
-          />
-        </label>
-        <label>
-          <textarea name="message" rows="7" placeholder="Enter Message*">
+          <textarea 
+						class="form-user_textarea" 
+						name="message" 
+						rows="7" 
+						placeholder="Enter Message*">
           </textarea>
         </label>
-        <button class="submit" type="submit">Send Message</button>
+        <button class="form-user_submit" type="submit">Send Message</button>
       </form>
       <div class="google_map" id="map"></div>
     </section>
@@ -118,8 +134,9 @@
 
         const InfoWindow = new google.maps.InfoWindow({
           content: `<div class="info">
+						<div class="info_container">
 				<p class="info_text">Voodoo</p>
-				<p class="info_adress">137 Glasgow St., Unit 115 Kitchener, ON N2G 4X8 Ukraine</p>
+				<p class="info_adress">137 Glasgow St., Unit 115 <br>Kitchener, ON N2G 4X8<br>Ukraine</p>
 				<ul class="auth">
 					<li class="auth__point">
 						<a class="auth__link-contakt" href="tel:1-800-480-9597">
@@ -140,7 +157,9 @@
 							</a>
 					</li>
 			</ul>
+			</div>
 			</div>`,
+          ariaLabel: uluru,
         });
 
         InfoWindow.open(map, marker);
