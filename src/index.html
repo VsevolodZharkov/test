@@ -99,8 +99,42 @@
         </label>
         <button class="submit" type="submit">Send Message</button>
       </form>
-      <!--             map          -->
+      <div class="google_map" id="map"></div>
     </section>
+    <script>
+      function initMap() {
+        const uluru = { lat: 43.45109870877214, lng: -80.51355644437547 };
+
+        const map = new google.maps.Map(document.getElementById("map"), {
+          zoom: 17,
+          center: uluru,
+        });
+
+        const marker = new google.maps.Marker({
+          position: uluru,
+          map: map,
+          icon: "./svg/symbol-defs.svg#Vector",
+        });
+
+        const InfoWindow = new google.maps.InfoWindow({
+          content:
+            "Voodoo 137 Glasgow St., Unit 115 Kitchener, ON N2G 4X8 Ukraine",
+        });
+
+        InfoWindow.open(map, marker);
+
+        marker.addListener("click", function () {
+          InfoWindow.open(map, marker);
+        });
+      }
+
+      window.initMap = initMap;
+    </script>
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDp4mypNUkiisiumY6NRcEiE0nOY9EuOO0&callback=initMap"
+      async
+      defer
+    ></script>
     <!-- <script src="js/03-feedback.js" type="module"></script> -->
   </body>
 </html>

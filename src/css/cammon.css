@@ -29,19 +29,16 @@ p {
   margin: 0;
 }
 
-ul,
-li {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-
-/* .shape-section {
+.shape-section {
 	padding: 77px 20px 133px 20px;
 }
 
 .form-user-data {
 	display: grid;
 	grid-template-columns: 60px 60px;
-} */
+}
 
+.google_map {
+	min-height: 573px;
+	width: 100%;
+}
