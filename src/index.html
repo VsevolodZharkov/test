@@ -5,51 +5,97 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Form</title>
-		<link rel="preconnect" href="https://fonts.googleapis.com">
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-		<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="./css/cammon.css" />
   </head>
   <body>
     <section class="shape-section">
       <h1 class="title">Contact Us</h1>
-      <p class="text">The Voodoo team is looking forward to hearing from you!</p>
-      <form class="form-user-data" autocomplete="off">
+      <p class="text">
+        The Voodoo team is looking forward to hearing from you!
+      </p>
+      <form class="form-user-data" autocomplete="on">
         <label>
-          Full Name*
-          <input type="text" name="full-name" />
+          <input
+            type="text"
+            name="full-name"
+            autofocus
+            placeholder="Full Name*"
+          />
         </label>
         <label>
-          Title/Position*
-          <input type="text" name="title" />
+          <input
+            type="text"
+            name="title"
+            autofocus
+            placeholder="Title/Position*"
+          />
         </label>
         <label>
-          Practice / Institution*
-          <input type="email" name="email" />
+          <input
+            name="education"
+            placeholder="Practice / Institution*"
+            autofocus
+            list="educations"
+          />
+          <datalist id="educations">
+            <option value="Institute 1"></option>
+            <option value="Institute 2"></option>
+            <option value="Institute 3"></option>
+            <option value="Institute 4"></option>
+            <option value="Institute 5"></option>
+          </datalist>
         </label>
         <label>
-          Email Address*
-          <input type="email" name="email" />
+          <input
+            type="email"
+            name="email"
+            autofocus
+            placeholder="Email Address*"
+          />
         </label>
         <label>
-          Phone Number*
-          <input type="number" name="phone" />
+          <input
+            type="tel"
+            name="phone_number"
+            autofocus
+            placeholder="Phone Number*"
+          />
         </label>
         <label>
-          Email
-          <input type="email" name="email" autofocus />
+          <input type="email" name="email" autofocus placeholder="Email" />
         </label>
         <label>
-          Medical Profession*
-          <input type="email" name="email" />
+          <input
+            name="option"
+            placeholder="Medical Profession*"
+            autofocus
+            list="options"
+          />
+          <datalist id="options">
+            <option value="Option 1"></option>
+            <option value="Option 2"></option>
+            <option value="Option 3"></option>
+            <option value="Option 4"></option>
+            <option value="Option 5"></option>
+          </datalist>
         </label>
         <label>
-          Type of Inquiry*
-          <input type="email" name="email" />
+          <input
+            type="email"
+            name="email"
+            autofocus
+            placeholder="Type of Inquiry*"
+          />
         </label>
         <label>
-          Enter Message
-          <textarea name="message" rows="8"></textarea>
+          <textarea name="message" rows="7" placeholder="Enter Message*">
+          </textarea>
         </label>
         <button class="submit" type="submit">Send Message</button>
       </form>
