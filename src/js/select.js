@@ -1,36 +1,41 @@
-const select = document.querySelectorAll("select");
-const form = document.querySelector(".form-user");
-// form.classList.add('is-hidden');
+const dropDown = document.querySelectorAll(".drop-down");
 
-// select[0].classList.add('is-hidden');
-// select[1].classList.add('is-hidden');
-// select[2].classList.add('is-hidden');
+dropDown.forEach(function (dropDownWrapper) {
+  const button = dropDownWrapper.querySelector(".drop-down__button");
+  const dropDownList = dropDownWrapper.querySelector(".drop-down__list");
+  const dropDownListItem = dropDownList.querySelectorAll(
+    ".drop-down__list-item"
+  );
+  const input = dropDownWrapper.querySelector(".drop-down__input-hidden");
+  const svg = dropDownWrapper.querySelector(".drop-down__svg");
 
-const newSelect = `
-<div class="selected">
-	<svg class="selected_svg">
-		<use href="./svg/symbol-defs.svg#icon-Shape"></use>
-	</svg>
-		<select class="" required name="option" placeholder="">
-			<option class="" value="Option 1">
-				Option 1
-			</option>
-			<option class="" value="Option 1">
-				Option 2
-			</option>
-			<option class="" value="Option 1">
-				Option 3
-			</option>
-			<option class="" value="Option 1">
-				Option 4
-			</option>
-			<option class="" value="Option 1">
-				Option 5
-			</option>
-			</select>
-	</div>
-`;
-// form.insertAdjacentHTML("beforeend", newSelect);
+  button.addEventListener("click", function (e) {
+    e.preventDefault();
+    dropDownList.classList.toggle("drop-down__list--visible");
+    svg.classList.toggle("is-hidden");
+    this.classList.add("drop-down__button--active");
+  });
 
+  dropDownListItem.forEach(function (listItem) {
+    listItem.addEventListener("click", function (e) {
+      e.stopPropagation();
+      button.innerText = this.innerText;
+      button.focus();
+      input.value = this.dataset.value;
+      dropDownList.classList.remove("drop-down__list--visible");
+    });
+  });
 
-
+  document.addEventListener("click", function (e) {
+    if (e.target !== button) {
+      dropDownList.classList.remove("drop-down__list--visible");
+      button.classList.remove("drop-down__button--active");
+    }
+  });
+  document.addEventListener("keydown", function (e) {
+    if (e.key == "Escape" || e.key == "Tab") {
+      dropDownList.classList.remove("drop-down__list--visible");
+      button.classList.remove("drop-down__button--active");
+    }
+  });
+});
