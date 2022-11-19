@@ -38,33 +38,38 @@ li {
   padding: 0;
   list-style: none;
 }
+.is-hidden {
+	display: none;
+}
 
 .shape-section {
+  display: grid;
+  justify-content: center;
   padding: 77px 20px 133px 20px;
 }
-.title {
-  font-family: "Avenir Next";
+
+.shape-section_title {
   font-weight: 700;
   font-size: 32px;
   line-height: 1.37;
   color: #1a1a1a;
+  margin-bottom: 13px;
 }
-.text {
+.shape-section_text {
   font-family: "Inter";
   font-weight: 400;
   font-size: 16px;
   line-height: 1.75;
   color: #1a1a1a;
   margin-bottom: 31px;
+  width: 280px;
 }
-/* .form-user_lab {
 
-} */
-
-.form-user-data {
+.form-user {
   display: grid;
-  grid-template-columns: 60px 60px;
+  justify-content: start;
 }
+
 .form-user_text {
   height: 64px;
   width: 351px;
@@ -78,17 +83,12 @@ li {
   color: #414042;
   border-radius: 8px;
 }
-/* .form-user_text:hover,
-.form-user_text:focus {
-  box-shadow: 0px 16px 32px rgba(254, 254, 255, 0.25);
-  border-radius: 8px;
-} */
+
 .form-user_textarea {
   height: auto;
   width: 100%;
   margin-bottom: 36px;
-	padding: 18px 19px;
-
+  padding: 18px 19px;
   font-family: "Inter";
   font-weight: 400;
   font-size: 16px;
@@ -96,11 +96,6 @@ li {
   color: #414042;
   border-radius: 8px;
 }
-/* .form-user_textarea:hover,
-.form-user_textarea:focus {
-  box-shadow: 0px 16px 32px rgba(202, 203, 210, 0.25);
-  border-radius: 8px;
-} */
 
 .form-user_submit {
   width: 353px;
@@ -116,6 +111,7 @@ li {
   text-align: center;
   color: #ffffff;
 }
+
 .google_map {
   min-height: 573px;
   width: 100%;
@@ -167,4 +163,73 @@ li {
   height: 13px;
   width: 13px;
   margin-right: 8px;
+}
+@media screen and (min-width: 1440px) {
+  .shape-section {
+    display: grid;
+    justify-content: space-between;
+    align-items: center;
+    padding: 138px 150px 388px;
+    grid-template-columns: 630px 1fr;
+    grid-column-gap: 40px;
+  }
+
+  .box {
+    height: 100%;
+    width: 100%;
+  }
+  .form-user {
+    display: grid;
+    grid-column-gap: 32px;
+    grid-template-columns: 299px 299px;
+  }
+  .form-user_lab {
+    margin-bottom: 35px;
+  }
+
+  .form-user_cont {
+    margin-bottom: 51px;
+    grid-row-start: 7;
+    grid-row-end: 8;
+  }
+
+  .form-user_text {
+    margin-bottom: 0;
+    width: 299px;
+  }
+
+  .shape-section_text {
+    width: 462px;
+  }
+  .form-user_text.form-user_accommodation {
+    width: 628px;
+    height: 64px;
+    margin-bottom: 53px;
+  }
+  .form-user_textarea {
+    width: 630px;
+    height: 338px;
+    margin-bottom: 0px;
+  }
+  .form-user_submit {
+    margin-bottom: 0px;
+    width: 222px;
+    height: 57px;
+    grid-row-start: 8;
+    grid-row-end: 9;
+  }
+  .google_map {
+    width: 100%;
+    height: 936px;
+  }
+  .am {
+    height: 100px;
+    width: 100px;
+  }
+}
+.box {
+	width: 628px;
+	height: 64px;
+	border-radius: 8px;
+	background-color: #fff;
 }
