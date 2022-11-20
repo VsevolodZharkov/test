@@ -23,14 +23,25 @@ const formSelected = (name) => {
 	`;
 };
 
-
+const button = document.querySelector(".form-user__submit");
 const selects = document.querySelectorAll("select");
 const form = document.querySelector(".form-user");
 const divSelected = document.querySelector(".selected");
-const optionList = document.querySelector(".selected_option");
+const optionList = document.querySelector(".selected__option");
 
 selects.forEach(function(select){
 	select.classList.add("is-hidden");
 	select.insertAdjacentHTML("afterend", formSelected(select.name));
 });
+
+
+
+
+
+
+
+
+
+
+
 
