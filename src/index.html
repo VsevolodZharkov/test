@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/cammon.css" />
+  </head>
+  <body>
+    <section class="shape-section">
+      <div class="box">
+        <h1 class="shape-section_title">Contact Us</h1>
+        <p class="shape-section_text">
+          The Voodoo team is looking forward to hearing from you!
+        </p>
+        <form class="form-user" for="options" autocomplete="on">
+          <label class="form-user_lab">
+            <input
+              class="form-user_text"
+              type="text"
+              name="full-name"
+              autofocus
+              placeholder="Full Name*"
+            />
+          </label>
+          <label class="form-user_lab">
+            <input
+              class="form-user_text"
+              type="text"
+              name="title"
+              autofocus
+              placeholder="Title/Position*"
+            />
+          </label>
+          <select
+            form="options"
+            autofocus
+            class="form-user_text"
+            name="Practice / Institution*"
+          >
+            <option value disabled selected>Practice / Institution*</option>
+            <option value="Institute 1">Institute 1</option>
+            <option value="Institute 2">Institute 2</option>
+            <option value="Institute 3">Institute 3</option>
+            <option value="Institute 4">Institute 4</option>
+            <option value="Institute 5">Institute 5</option>
+          </select>
+          <label class="form-user_lab">
+            <input
+              class="form-user_text"
+              type="email"
+              name="email"
+              autofocus
+              placeholder="Email Address*"
+            />
+          </label>
+          <label class="form-user_lab">
+            <input
+              class="form-user_text"
+              type="tel"
+              name="phone_number"
+              autofocus
+              placeholder="Phone Number*"
+            />
+          </label>
+          <select form="options" autofocus class="form-user_text" name="Medical Profession*">
+            <option value disabled selected>Medical Profession*</option>
+            <option value="Option 1">Option 1</option>
+            <option value="Option 2">Option 2</option>
+            <option value="Option 3">Option 3</option>
+            <option value="Option 4">Option 4</option>
+            <option value="Option 5">Option 5</option>
+          </select>
+          <select
+            form="options"
+            autofocus
+            class="form-user_text form-user_accommodation"
+            name="Type of Inquiry*"
+          >
+            <option value disabled selected>Type of Inquiry*</option>
+            <option class="1" value="Option 1">Option 1</option>
+            <option class="1" value="Option 2">Option 2</option>
+            <option class="1" value="Option 3">Option 3</option>
+            <option class="1" value="Option 4">Option 4</option>
+            <option class="1" value="Option 5">Option 5</option>
+          </select>
+          <label class="form-user_cont">
+            <textarea
+              class="form-user_textarea"
+              name="message"
+              rows="7"
+              placeholder="Enter Message*"
+            >
+            </textarea>
+          </label>
+          <button class="form-user_submit" type="submit">Send Message</button>
+        </form>
+      </div>
+      <div class="google_map" id="map"></div>
+    </section>
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDp4mypNUkiisiumY6NRcEiE0nOY9EuOO0&callback=initMap"
+      async
+      defer
+    ></script>
+    <script src="./js/initMap.js" type="module"></script>
+    <script src="./js/renderInput.js" type="module"></script>
+    <script src="./js/select.js" type="module"></script>
+  </body>
+</html>
