@@ -48,14 +48,15 @@ li {
   padding: 77px 20px 133px 20px;
 }
 
-.shape-section_title {
+.shape-section__title {
   font-weight: 700;
   font-size: 32px;
   line-height: 1.37;
   color: #1a1a1a;
   margin-bottom: 13px;
 }
-.shape-section_text {
+
+.shape-section__text {
   font-family: "Inter";
   font-weight: 400;
   font-size: 16px;
@@ -71,7 +72,7 @@ li {
   justify-content: start;
 }
 
-.form-user_text {
+.form-user__text {
   height: 64px;
   width: 351px;
   margin-bottom: 37px;
@@ -84,17 +85,17 @@ li {
   color: #414042;
   border-radius: 8px;
 }
-.form-user_text:focus,
-.form-user_text:hover {
+.form-user__text:focus,
+.form-user__text:hover {
   outline: none;
   background: rgba(141, 142, 144, 0.26);
 }
-.form-user_textarea:focus,
-.form-user_textarea:hover {
+.form-user__textarea:focus,
+.form-user__textarea:hover {
   outline: none;
   background: rgba(141, 142, 144, 0.26);
 }
-.form-user_textarea {
+.form-user__textarea {
   height: auto;
   width: 100%;
   margin-bottom: 36px;
@@ -107,7 +108,7 @@ li {
   border-radius: 8px;
 }
 
-.form-user_submit {
+.form-user__submit {
   width: 353px;
   height: 51px;
   background-color: #1a1a1a;
@@ -122,7 +123,7 @@ li {
   color: #ffffff;
 }
 
-.google_map {
+.google__map {
   min-height: 573px;
   width: 100%;
 }
@@ -134,7 +135,7 @@ li {
   box-shadow: 0px 15px 30px rgba(220, 221, 243, 0.25);
   border-radius: 8px;
 }
-.info_container {
+.info__container {
   padding: 5px 10px;
 }
 .info_text {
@@ -144,7 +145,7 @@ li {
   line-height: 1.66;
 }
 
-.info_adress {
+.info__adress {
   font-family: "Inter";
   font-weight: 400;
   font-size: 12px;
@@ -293,38 +294,38 @@ li {
     grid-template-columns: 299px 299px;
   }
 
-  .form-user_cont {
+  .form-user__cont {
     margin-bottom: 51px;
     grid-row-start: 7;
     grid-row-end: 8;
   }
 
-  .form-user_text {
+  .form-user__text {
     width: 299px;
 		margin-bottom: 32px;
   }
 
-  .shape-section_text {
+  .shape-section__text {
     width: 462px;
   }
-  .form-user_text.form-user_accommodation {
+  .form-user__text.form-user__accommodation {
     width: 628px;
     height: 64px;
     margin-bottom: 53px;
   }
-  .form-user_textarea {
+  .form-user__textarea {
     width: 630px;
     height: 338px;
     margin-bottom: 0px;
   }
-  .form-user_submit {
+  .form-user__submit {
     margin-bottom: 0px;
     width: 222px;
     height: 57px;
     grid-row-start: 8;
     grid-row-end: 9;
   }
-  .google_map {
+  .google__map {
     width: 100%;
     height: 936px;
   }
