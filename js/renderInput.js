@@ -1,6 +1,5 @@
 const formSelected = (name) => {
 	const res = name === 'Type of Inquiry*';
-	console.log(res);
 	return `
 	<div class=${res ? 'form-group__last-grid' : 'form-group' }>
 		<div class="drop-down">
@@ -34,7 +33,25 @@ selects.forEach(function(select){
 	select.insertAdjacentHTML("afterend", formSelected(select.name));
 });
 
+form.addEventListener("submit", function(e) {
+	e.preventDefault();
+	// console.dir(e.target);
+	// console.log(e.target.children)
+	const a = e.target.children;
+	const b = [...a];
+	b.forEach((item) => {
+		console.log(item.children[0].children[2]);
+		console.dir(item.children[0].children[2]);
 
+		// if(item.children[0].value !== ' ') {
+		// 	console.log(item.children[0].value); 
+		// }
+		// console.dir(item.children[0].type);
+		// console.dir(item.children[0].value !== ' ');
+
+	});
+
+});
 
 
 
